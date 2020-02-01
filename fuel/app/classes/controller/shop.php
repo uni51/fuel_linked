@@ -29,4 +29,9 @@ class Controller_Shop extends Controller {
         $item->delete();
     }
 
+    public function action_update() {
+        $item = Model_Item::find_by_pk(1);
+        $item['price'] = 100;
+        $item->save();
+    }
 }
