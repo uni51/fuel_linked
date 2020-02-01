@@ -8,4 +8,10 @@ class Controller_Sample extends Controller {
         return View::forge('sample/index', $data);
     }
 
+    public function action_calc($a, $b) {
+        $answer = $a * $b;
+
+        print($answer);
+    }
+
 }
