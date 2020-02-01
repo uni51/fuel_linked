@@ -19,11 +19,18 @@ class Controller_Sample extends Controller {
      *
      * @return mixed
      */
-    public function action_index() {
-        $view = View::forge('sample/index');
-        $view->set('html', '<p>段落です</p>', false); // サニタイズを無効にする
-        $view->set('danger', '<script></script>');
+//    public function action_index() {
+//        $view = View::forge('sample/index');
+//        $view->set('html', '<p>段落です</p>', false); // サニタイズを無効にする
+//        $view->set('danger', '<script></script>');
+//
+//        return $view;
+//    }
 
-        return $view;
+
+    public function action_index() {
+        return View::forge('sample/index');
     }
+
+
 }
