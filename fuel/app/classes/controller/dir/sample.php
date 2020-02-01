@@ -27,10 +27,18 @@ class Controller_Dir_Sample extends Controller {
 //    }
 
 
+    /**
+     * Chapter4-2：サブディレクトリ、パラメータとURL
+     *
+     */
     public function action_index() {
         print('index');
     }
 
+    /**
+     * Chapter4-2：サブディレクトリ、パラメータとURL
+     *
+     */
     public function action_save() {
         print('save');
     }
