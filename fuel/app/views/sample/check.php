@@ -1,9 +1,9 @@
-<p>お問い合わせありがとうございます。</p>
+<p>お問い合わせの確認画面です</p>
 <form action="/sample/check" method="post">
     <table>
         <tr>
             <th>お名前</th>
-            <td><input type="text" name="myname" size="35" value="<?php print($myname); ?>" /></td>
+            <td>...</td>
         </tr>
         <tr>
             <th></th>
@@ -15,5 +15,3 @@
         </tr>
     </table>
 </form>
-
-
