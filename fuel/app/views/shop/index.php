@@ -14,9 +14,9 @@
 
     <div id="content">
         <ul>
-                <?php foreach($rows as $row): ?>
+                <?php // foreach($rows as $row): ?>
                 <li><?php print($row['item_name']); ?> / <?php print($row['price']); ?></li>
-                <?php endforeach; ?>
+                <?php // endforeach; ?>
         </ul>
     </div>
 
