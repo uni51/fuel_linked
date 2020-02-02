@@ -23,14 +23,21 @@ class Controller_User extends Controller_Template
 
 	public function action_login()
 	{
+        if(Input::method() == 'POST')
+        {
+            if(Auth::login(Input::post('username'), Input::post('password')))
+            {
+                Response::redirect('admin/index');
+            }
+        }
 		$this->template->title = 'User &raquo; Login';
 		$this->template->content = View::forge('user/login');
 	}
 
 	public function action_logout()
 	{
-		$this->template->title = 'User &raquo; Logout';
-		$this->template->content = View::forge('user/logout');
+	    Auth::logout();
+        Response::redirect('user/login');
 	}
 
 }
