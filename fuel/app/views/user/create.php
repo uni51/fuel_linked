@@ -1,0 +1,13 @@
+<h1>ユーザー登録</h1>
+
+<?php echo Form::open('user/create'); ?>
+<dl>
+    <dt><?php echo Form::label('username', 'ユーザー名'); ?></dt>
+    <dd><?php echo Form::input('username'); ?></dd>
+    <dt><?php echo Form::label('password', 'パスワード'); ?></dt>
+    <dd><?php echo Form::password('password'); ?></dd>
+</dl>
+<p>
+    <?php echo Form::submit('submit', '登録する'); ?>
+</p>
+<?php echo Form::close(); ?>
