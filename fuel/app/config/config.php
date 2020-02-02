@@ -220,6 +220,7 @@ return array(
 		// 'csrf_bad_request_on_fail' => false,
 		// 'csrf_auto_token'          => false,
 		// 'csrf_token_key'           => 'fuel_csrf_token',
+        'csrf_token_key'           => 'sec_token',
 		// 'csrf_expiration'          => 0,
 
 		/**

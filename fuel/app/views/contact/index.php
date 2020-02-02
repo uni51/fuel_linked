@@ -30,7 +30,10 @@
         </tr>
         <tr>
             <th></th>
-            <td><?php print(Form::submit('submit', '送信する')); ?></td>
+            <td>
+                <?php print(Form::submit('submit', '送信する')); ?>
+                <?php print(Form::hidden(Config::get('security.csrf_token_key'), Security::fetch_token())); ?>
+            </td>
         </tr>
     </table>
 <?php print(Form::close()); ?>

@@ -12,7 +12,7 @@ class Controller_Contact extends Controller_Template {
             ->add_rule('valid_email');
 
         if (Input::post('submit')) {
-           if($val->run()) {
+           if($val->run() && Security::check_token()) {
                Session::set_flash('myname', Input::post('myname'));
                Session::set_flash('email', Input::post('email'));
                Session::set_flash('gender', Input::post('gender'));
