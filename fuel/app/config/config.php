@@ -148,7 +148,7 @@ return array(
 	 *  Fallback language when file isn't available for default language.
 	 */
 
-	// 'language_fallback' => 'en',
+	 'language_fallback' => 'en',
 
 	/**
 	 *  PHP set_locale() setting. Use null to not set.
@@ -451,7 +451,7 @@ return array(
 	 * -------------------------------------------------------------------------
 	 */
 
-	// 'always_load' => array(
+	 'always_load' => array(
 		/**
 		 * ---------------------------------------------------------------------
 		 *  These packages are loaded on Fuel's startup.
@@ -469,9 +469,10 @@ return array(
 		 * ---------------------------------------------------------------------
 		 */
 
-		// 'packages' => array(
-		// 	// 'orm',
-		// ),
+		 'packages' => array(
+		     'email',
+		 	// 'orm',
+		 ),
 
 		/**
 		 * ---------------------------------------------------------------------
@@ -533,5 +534,5 @@ return array(
 		 */
 
 		// 'language' => array(),
-	// ),
+	 ),
 );

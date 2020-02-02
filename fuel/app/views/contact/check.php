@@ -1,4 +1,4 @@
-<?php print(Form::open('contact/check')); ?>
+<?php print(Form::open('contact/thanks')); ?>
 <table>
     <tr>
         <th>お名前</th>
