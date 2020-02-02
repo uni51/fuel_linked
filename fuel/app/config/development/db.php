@@ -26,5 +26,6 @@ return array(
 			'username' => 'root',
 			'password' => '',
 		),
+        'profiling' => 'true',
 	),
 );

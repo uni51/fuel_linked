@@ -5,6 +5,8 @@ class Controller_Item extends Controller_Template
 
 	public function action_index()
 	{
+//	    Profiler::mark('Item_indexの開始');
+
 	    $count = Model_Item::count();
 
         $config = array(
@@ -21,9 +23,15 @@ class Controller_Item extends Controller_Template
                             ->offset($pagination->offset)
                             ->get();
 
+//        Profiler::mark('DB取得完了');
+
+//		Debug::dump($data['items']);
+
 		$this->template->title = "Items";
 		$this->template->content = View::forge('item/index', $data);
 		$this->template->content->set_safe('pagination', $pagination);
+
+//        Profiler::mark('Item_indexの終了');
 	}
 
 	public function action_view($id = null)
