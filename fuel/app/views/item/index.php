@@ -23,10 +23,11 @@
 <?php endforeach; ?>	</tbody>
 </table>
 
+<?php echo $pagination; ?>
+
 <?php else: ?>
 <p>No Items.</p>
 
 <?php endif; ?><p>
 	<?php echo Html::anchor('item/create', 'Add new Item', array('class' => 'btn btn-success')); ?>
 
-</p>

@@ -1,13 +1,29 @@
 <?php
 class Controller_Item extends Controller_Template
 {
+    private $per_page = 3;
 
 	public function action_index()
 	{
-		$data['items'] = Model_Item::find('all');
+	    $count = Model_Item::count();
+
+        $config = array(
+            'pagination_url' => 'item',
+            'uri_segment' => 2,
+            'num_links' => 4,
+            'per_page' => $this->per_page,
+            'total_items' => $count,
+        );
+        $pagination = Pagination::forge('item_pagination', $config);
+
+		$data['items'] = Model_Item::query()
+                            ->limit($this->per_page)
+                            ->offset($pagination->offset)
+                            ->get();
+
 		$this->template->title = "Items";
 		$this->template->content = View::forge('item/index', $data);
-
+		$this->template->content->set_safe('pagination', $pagination);
 	}
 
 	public function action_view($id = null)
