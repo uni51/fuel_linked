@@ -1,12 +1,23 @@
-<?php print(Form::open('contact/check')); ?>
+<?php print(Form::open('contact/index')); ?>
     <table>
         <tr>
             <th><?php print(Form::label('お名前', 'myname')); ?></th>
-            <td><?php print(Form::input('myname')); ?></td>
+            <td>
+                <?php print(Form::input('myname')); ?>
+                <?php if ($val->error('myname')): ?>
+                    <p class="error"><?php print($val->error('myname')); ?></p>
+                <?php endif; ?>
+            </td>
+            </td>
         </tr>
         <tr>
             <th><?php print(Form::label('メールアドレス', 'email')); ?></th>
-            <td><?php print(Form::input('email')); ?></td>
+            <td>
+                <?php print(Form::input('email')); ?>
+                <?php if ($val->error('email')): ?>
+                    <p class="error"><?php print($val->error('email')); ?></p>
+                <?php endif; ?>
+            </td>
         </tr>
         <tr>
             <th><?php print(Form::label('性別', 'gender')); ?></th>
